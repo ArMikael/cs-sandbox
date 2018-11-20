@@ -24,11 +24,11 @@ namespace CS_Sandbox
                 Console.WriteLine("You are not allowed to enter");
             }
 
-            GradesBook book = new GradesBook();
-            book.AddGrade(99);
-            book.AddGrade(77);
+            PricesBook book = new PricesBook();
+            book.AddPrice(99);
+            book.AddPrice(77);
 
-            // GradeStatistics stats = book.getAverage();
+            // PriceStatistics stats = book.getAverage();
         }
     }
 }

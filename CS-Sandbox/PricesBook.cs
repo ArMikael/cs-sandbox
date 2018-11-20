@@ -6,16 +6,27 @@ namespace CS_Sandbox
 {
     class PricesBook
     {
-        public void AddGrade(float grade)
+        public void AddPrice(float price)
         {
-            grades.Add(grade);
+            prices.Add(price);
         }
 
-        List<float> grades = new List<float>();
+        List<float> prices = new List<float>();
 
         public PriceStatistics ComputeStatistics()
         {
             PriceStatistics stats = new PriceStatistics();
+            float sum = 0;
+
+            foreach(float price in prices)
+            {
+                sum += price;
+                stats.LowestPrice = Math.Min(stats.LowestPrice, price);
+                stats.HighestPrice = Math.Max(stats.HighestPrice, price);
+            }
+
+            stats.AveragePrice = sum / prices.Count;
+            
             return stats;
         }
     }
