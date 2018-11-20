@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CS_Sandbox
 {
-    class GradesBook
+    class PricesBook
     {
         public void AddGrade(float grade)
         {
@@ -12,5 +12,11 @@ namespace CS_Sandbox
         }
 
         List<float> grades = new List<float>();
+
+        public PriceStatistics ComputeStatistics()
+        {
+            PriceStatistics stats = new PriceStatistics();
+            return stats;
+        }
     }
 }
