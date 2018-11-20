@@ -28,7 +28,10 @@ namespace CS_Sandbox
             book.AddPrice(99);
             book.AddPrice(77);
 
-            // PriceStatistics stats = book.getAverage();
+            PriceStatistics stats = book.ComputeStatistics();
+            Console.WriteLine("Average price: " + stats.AveragePrice);
+            Console.WriteLine("Lowest price: " + stats.LowestPrice);
+            Console.WriteLine("Highest price: " + stats.HighestPrice);
         }
     }
 }

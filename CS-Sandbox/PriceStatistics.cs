@@ -8,8 +8,7 @@ namespace CS_Sandbox
     {
         public PriceStatistics()
         {
-            AveragePrice = 0;
-            LowestPrice = 0;
+            LowestPrice = float.MaxValue;
             HighestPrice = 0;
         }
 
